@@ -1,3 +1,5 @@
+#This method does not work for polygones.
+
 # This code will send a request to the Google 
 # Maps Static API using the requests library, 
 # and retrieve the map image in response. It 
