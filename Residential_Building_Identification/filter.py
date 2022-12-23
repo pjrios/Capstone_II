@@ -1,43 +1,63 @@
-# This code will open the GeoJSON file, 
-# read the contents into a Python object, 
-# and then iterate through the features in the file.
-# For each feature, it will extract the coordinates 
-# and check if they fall within the specified bounding box. 
-# If the coordinates are within the bounding box, the feature 
-# is added to a list of filtered features. Finally, the code
-# writes the filtered features to a new GeoJSON file.
+#!/usr/bin/env python
+# coding: utf-8
 
-# Note that this code assumes that the GeoJSON file 
-# follows the standard format for a GeoJSON file, 
-# with a top-level features property that contains 
-# a list of feature objects. Each feature object 
-# should have a geometry property that contains the 
-# coordinates for the feature.
+# This code filters the features in a GeoJSON file called Alaska.geojson based on whether their coordinates are contained within a set of polygons contained in another GeoJSON file called alaska-ra.geojson.
+# 
+# The code first imports the geopandas and shapely libraries. It then loads the alaska-ra.geojson file into a GeoDataFrame object called polygons_gdf using the read_file function from geopandas.
+# 
+# Next, it iterates over the rows of the polygons_gdf GeoDataFrame and creates a list of Polygon objects called polygons. It does this by extracting the geometry of each row using the geometry attribute, and then creating a Polygon object using the shape function from shapely.
+# 
+# The code then loads the Alaska.geojson file into a GeoDataFrame object called features_gdf using the read_file function.
+# 
+# It then iterates over the rows of the features_gdf GeoDataFrame and extracts the coordinates of each feature using the geometry attribute. It then checks if the coordinates are contained within any of the Polygon objects in the polygons list using the contains method from Shapely. If the coordinates are contained within a polygon, the feature is added to a list of filtered features called filtered_features.
+# 
+# Finally, the code creates a new GeoDataFrame object called filtered_gdf using the GeoDataFrame constructor and the filtered_features list. It then saves the filtered_gdf to a new GeoJSON file called filtered.geojson using the to_file function.
+# 
+# Finally, the code prints the number of polygons in the polygons_gdf GeoDataFrame and the number of filtered features in the filtered_features list.
+# 
+# This code should filter the features in the Alaska.geojson file and create a new GeoJSON file called filtered.geojson with only the features that are contained within the polygons in the alaska-ra.geojson file
 
-import json
+# In[14]:
 
-# Open the GeoJSON file
-with open('buildings.geojson', 'r') as f:
-    data = json.load(f)
 
-# Set the bounding box for the area of interest
-min_lat = 40.7
-max_lat = 40.8
-min_lng = -74.0
-max_lng = -73.9
+import geopandas as gpd
+from shapely.geometry import Polygon, shape
 
-# Create a list to store the features that fall within the bounding box
+# Load the GeoJSON file containing the polygons
+polygons_gdf = gpd.read_file('alaska-ra.geojson')
+
+# Create a list of Polygon objects
+polygons = []
+for row in polygons_gdf.itertuples(index=True, name='GeoPandas'):
+    polygon = shape(row.geometry)
+    polygons.append(polygon)
+
+# Load the GeoJSON file with the features to filter
+features_gdf = gpd.read_file('Alaska.geojson')
+
+# Iterate over the features and extract the coordinates
 filtered_features = []
+for row in features_gdf.itertuples(index=True, name='GeoPandas'):
+    coords = shape(row.geometry)
+    #print("processing")
+    # Check if the coordinates are contained within any of the polygons
+    contained = False
+    for polygon in polygons:
+        if polygon.contains(coords):
+            contained = True
+            break
 
-# Iterate through the features in the GeoJSON file
-for feature in data['features']:
-    # Get the coordinates of the current feature
-    coordinates = feature['geometry']['coordinates']
-    # Check if the coordinates fall within the bounding box
-    if coordinates[1] >= min_lat and coordinates[1] <= max_lat and coordinates[0] >= min_lng and coordinates[0] <= max_lng:
-        # Add the feature to the filtered list
-        filtered_features.append(feature)
+    # If the coordinates are contained within a polygon, add the feature to the list of filtered features
+    if contained:
+        filtered_features.append(row.geometry)
+        
+# Create a new GeoDataFrame with the filtered features
+filtered_gdf = gpd.GeoDataFrame(geometry=filtered_features)
 
-# Write the filtered features to a new GeoJSON file
-with open('filtered_buildings.geojson', 'w') as f:
-    json.dump({'type': 'FeatureCollection', 'features': filtered_features}, f)
+# Save the filtered features to a new GeoJSON file
+filtered_gdf.to_file('filtered.geojson', driver='GeoJSON')
+        
+# Print the number of polygons and the number of filtered features
+print(f'Number of polygons: {len(polygons_gdf)}')
+print(f'Number of filtered features: {len(filtered_features)}')
+
