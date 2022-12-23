@@ -1,6 +1,6 @@
 # Residential Building Identification
 
-## File: getImages
+## File: getImages.py
 This is the main program for this section. It is designed to read a GeoJSON file containing a set of features defined by coordinates, and use those coordinates to retrieve images from Google Maps using the downloader.exe program. The program consists of three main parts: and does the following:
 
 1. The get_square_bounds function: This function takes a polygon defined by a list of coordinates in the format [[[longitude1, latitude1], [longitude2, latitude2], ...]] and returns a string with the coordinates of a square enclosing the polygon, with each coordinate separated by a space. The function first extracts the coordinates from the polygon and calculates the bounding box of the polygon. It then calculates the center point of the bounding box and the side length of the square, and finally returns the coordinates of the square as a string.
