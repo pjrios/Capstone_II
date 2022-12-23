@@ -9,5 +9,11 @@ This is the main program for this section. It is designed to read a GeoJSON file
 
 3. The clean.bat script: This script is called at the end of the main block of code and is used to delete the files in the output that were created by downloader.exe but that we are not going to use. 
 
+## File: Arkansas_residential-areas_GeoJSON.zip
+This zip contains a GeoJson file of the resindetial areas in arkansas retrieved using the following website: https://export.hotosm.org/en/v3/exports/new/describe
+
+## Microsoft Building Footprints Datasets
+The Microsoft Building Footprints datsets can be found here: https://github.com/Microsoft/USBuildingFootprints
+
 ## Other files
 The rest of the files include the individual  functionalities such as: reading and filtering json files. 
