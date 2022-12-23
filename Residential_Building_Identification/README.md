@@ -1,11 +1,4 @@
 # Residential Building Identification
-
-## Arkansas_residential-areas_GeoJSON.zip
-This zip file contains a GeoJson file of the resindetial areas in arkansas retrieved using the following website: https://export.hotosm.org/en/v3/exports/new/describe
-
-## Microsoft Building Footprints Datasets
-The Microsoft Building Footprints datsets can be found here: https://github.com/Microsoft/USBuildingFootprints
-
 ## getImages.py
 ### <ins>Status: completed</ins>
 This is the main program for this section. It is designed to read a GeoJSON file containing a set of features defined by coordinates, and use those coordinates to retrieve images from Google Maps using the downloader program form "allmapsoft". The program consists of three main parts: and does the following:
@@ -17,11 +10,11 @@ This is the main program for this section. It is designed to read a GeoJSON file
 3. Clean up: It moves the combined map image from the source directory to a destination directory using the shutil.move function and then cleans up by deleting the intermediate files and directories that were created during the processing.
 
 ## filter.py
-### <ins>Status: In progress</ins>
-This files contains functionalities to filtering json based on coordinates. 
+### <ins>Status: Completed </ins>
+This file contains functionalities for filtering json files based on coordinates. This code filters the features in a GeoJSON file called [name].geojson based on whether their coordinates are contained within a set of polygons contained in another GeoJSON file called [name]-ra.geojson. [name] represent a variable with the name of a state.
 
-## results
-This folder contains the results of running getImages.py with the file small_Alaska.geojson as an input. 
+1. The code first imports the geopandas and shapely libraries. It then loads the [name]-ra.geojson file into a GeoDataFrame object called polygons_gdf using the read_file function from geopandas. Next, it iterates over the rows of the polygons_gdf GeoDataFrame and creates a list of Polygon objects called polygons. It does this by extracting the geometry of each row using the geometry attribute, and then creating a Polygon object using the shape function from shapely. The code then loads the [name].geojson file into a GeoDataFrame object called features_gdf using the read_file function.
 
-## small_Alaska.geojson
-This Json file contains a subset of size 6 taken form Alaska.geojson. This file is intended for testing only. 
+2. It then iterates over the rows of the features_gdf GeoDataFrame and extracts the coordinates of each feature using the geometry attribute. It then checks if the coordinates are contained within any of the Polygon objects in the polygons list using the contains method from Shapely. If the coordinates are contained within a polygon, the feature is added to a list of filtered features called filtered_features.
+
+3. Finally, the code creates a new GeoDataFrame object called filtered_gdf using the GeoDataFrame constructor and the filtered_features list. It then saves the filtered_gdf to a new GeoJSON file called [name]_filtered.geojson using the to_file function. 
