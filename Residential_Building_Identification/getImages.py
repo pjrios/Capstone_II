@@ -9,7 +9,7 @@
 # 
 # The clean.bat script: This script is called at the end of the main block of code and is used to delete the files in the output that were created by downloader.exe but that we are not going to use.
 
-# In[11]:
+# In[41]:
 
 
 import json
@@ -72,16 +72,32 @@ for feature in data['features']:
     #print(combine)
     subprocess.run(combine, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     
-    # Clean
-    # -----Generate command to delete path
+    
+    # Set the source and destination directories
     name = "task{}"
     folder = name.format(i)
+    img = folder + ".jpg"
+    src = 'C:/Users/pjrio/CapstoneII/images/'+folder+"_combined"
+    dst = 'C:/Users/pjrio/CapstoneII/images/results'
+
+    # Set the source and destination file paths
+    
+    # Set the source and destination file paths
+    src_file = os.path.join(src, img)
+    dst_file = os.path.join(dst, img)
+
+    # Use the shutil module to move the file
+    shutil.move(src_file, dst_file)
+    
+    # Clean
+    # -----Generate command to delete path
     folder_path = r'C:/Users/pjrio/CapstoneII/images'+"/"+ folder 
+    combined_folder_path = r'C:/Users/pjrio/CapstoneII/images'+"/"+ folder+"_combined"
     #print(folder_path)
     
     # -----Use the remove function to delete the path
     shutil.rmtree(folder_path)
-            
+    shutil.rmtree(combined_folder_path)      
     #increase counter
     i = i + 1
 
@@ -92,4 +108,3 @@ script_path = 'C:/Users/pjrio/CapstoneII/images/clean.bat'
 subprocess.call([script_path])
     
     
-
