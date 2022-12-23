@@ -19,12 +19,32 @@
 
 # In[14]:
 
-
 import geopandas as gpd
 from shapely.geometry import Polygon, shape
+import os
+
+# Input variables
+input_directory = 'States_GeoJSONs'
+input_name  = 'alaska'
+input_filename = input_name + ".geojson"
+input_filepath  = os.path.join(input_directory, input_filename)
+#print(input_filepath)
+
+# Residential areas variables
+ra_directory = 'Residential_Areas'
+ra_name  = input_name
+ra_filename  = ra_name + '-ra.geojson'
+ra_filepath  = os.path.join(ra_directory, ra_filename)
+#print(ra_filepath)
+
+# Output variables
+output_directory = 'Filtered'
+output_filename = input_name + '_filtered.geojson'
+output_filepath = os.path.join(output_directory, output_filename)
+#print(output_filepath)
 
 # Load the GeoJSON file containing the polygons
-polygons_gdf = gpd.read_file('alaska-ra.geojson')
+polygons_gdf = gpd.read_file(ra_filepath)
 
 # Create a list of Polygon objects
 polygons = []
@@ -33,7 +53,7 @@ for row in polygons_gdf.itertuples(index=True, name='GeoPandas'):
     polygons.append(polygon)
 
 # Load the GeoJSON file with the features to filter
-features_gdf = gpd.read_file('Alaska.geojson')
+features_gdf = gpd.read_file(input_filepath)
 
 # Iterate over the features and extract the coordinates
 filtered_features = []
@@ -55,9 +75,8 @@ for row in features_gdf.itertuples(index=True, name='GeoPandas'):
 filtered_gdf = gpd.GeoDataFrame(geometry=filtered_features)
 
 # Save the filtered features to a new GeoJSON file
-filtered_gdf.to_file('filtered.geojson', driver='GeoJSON')
+filtered_gdf.to_file(output_filepath, driver='GeoJSON')
         
 # Print the number of polygons and the number of filtered features
-print(f'Number of polygons: {len(polygons_gdf)}')
-print(f'Number of filtered features: {len(filtered_features)}')
-
+#print(f'Number of polygons: {len(polygons_gdf)}')
+#print(f'Number of filtered features: {len(filtered_features)}')
