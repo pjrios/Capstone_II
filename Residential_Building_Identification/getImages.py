@@ -27,12 +27,13 @@
 
 # In[3]:
 
-
 import json
 import subprocess
 import shutil
 import os, glob
 import time
+from shapely.geometry import Polygon, box
+
 
 # name of the state we are working with
 # should we change it to an input?
@@ -67,29 +68,14 @@ with open(filtered_file_path, 'r') as f:
     data = json.load(f)
     
 def get_square_bounds(polygon):
-    # Extract the coordinates from the polygon
-    coordinates = polygon[0]
-
-    # Calculate the bounding box of the polygon
-    min_lat = min(coord[1] for coord in coordinates)
-    min_lng = min(coord[0] for coord in coordinates)
-    max_lat = max(coord[1] for coord in coordinates)
-    max_lng = max(coord[0] for coord in coordinates)
-
-    # Calculate the center point of the bounding box
-    center_lat = (min_lat + max_lat) / 2
-    center_lng = (min_lng + max_lng) / 2
-
-    # Calculate the side length of the square
-    side_length = max(max_lat - min_lat, max_lng - min_lng)
-
-    # Calculate the coordinates of the square
-    left = center_lng - side_length / 2
-    right = center_lng + side_length / 2
-    top = center_lat + side_length / 2
-    bottom = center_lat - side_length / 2
-
-    # Return the square as a tuple of coordinates
+    # Convert the input polygon to a shapely Polygon
+    shapely_polygon = Polygon(polygon[0])
+    
+    # Get the bounding box of the polygon
+    bbox = shapely_polygon.bounds
+    
+    # Extract the left, right, top and bottom coordinates
+    left, bottom, right, top = bbox
     return f"{left} {right} {top} {bottom}"
 
 # Iterate through the features in the GeoJSON file
@@ -105,6 +91,8 @@ for feature in data['features']:
     # Generate command
     string = state_name + "_" + "task{}.gmid"
     result = string.format(i)
+    img_name = state_name + "_" + "task{}.jpg"
+    img_name = img_name.format(i)
     
     #"C:\allmapsoft\gsmd\downloader.exe" para1 para2 para3 para4 para5 para6 para7 para8
     # para1: task name(only filename, without path)
@@ -165,7 +153,8 @@ for feature in data['features']:
     
     # -----Use the remove function to delete the path
     shutil.rmtree(folder_path)
-    shutil.rmtree(combined_folder_path)      
+    shutil.rmtree(combined_folder_path)
+
     #increase counter
     i = i + 1
 
@@ -181,3 +170,4 @@ for feature in data['features']:
         
     #end = time.time()
     #print(f'Running time: {end - start} seconds')
+
