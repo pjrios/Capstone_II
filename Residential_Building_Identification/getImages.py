@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# This code appears to be a Python script that processes a GeoJSON file and generates map images using the "allmapsoft" software.
+# This code processes a GeoJSON file and generates map images using the "allmapsoft" software.
 # 
-# Here is a high-level overview of what the code does:
+# Here is an overview of what the code does:
 # 
-# 1. The code imports several modules that it will use later: json, subprocess, shutil, and os.
+# 1. The code imports several modules that it will use later: json, subprocess, shutil, os and shapely.
 # 
 # 2. It defines a function get_square_bounds that takes a polygon (a list of coordinates) as an argument and returns the coordinates of a square that bounds the polygon.
 # 
-# 3. The code opens the GeoJSON file small_Alaska.geojson and loads its contents into a variable called data.
+# 3. The code opens the GeoJSON file [state_name].geojson and loads its contents into a variable called data.
 # 
 # 4. It iterates through the features in the GeoJSON file and extracts the coordinates of each feature.
 # 
