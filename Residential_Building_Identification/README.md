@@ -9,7 +9,8 @@ To run this programs, you will need the following:
 6. Read and write permissions for the specified directories States_GeoJSONs, Residential_Areas, Filtered, images, and images/results/
 7. In addition, the programs assume that you have the necessary dependencies and packages installed to run the functions from the imported libraries.
 ## getImages.py
-This program is designed to read a GeoJSON file containing a set of features defined by coordinates, and use those coordinates to retrieve images from Google Maps using the downloader program form "allmapsoft". The program consists of three main parts: and does the following:
+This program is designed to read a GeoJSON file containing a set of features defined by coordinates, and use those coordinates to retrieve images from Google Maps using the downloader program form "allmapsoft". 
+### The rest of the images can be found here: https://uark.box.com/s/h6898oyvnkbumb3ix2y2fufk2nykhr5u
 
 ## filter.py
 This file contains functionalities for filtering json files based on coordinates. This code filters the features in a GeoJSON file called [name].geojson based on whether their coordinates are contained within a set of polygons contained in another GeoJSON file called [name]-ra.geojson. [name] represent a variable with the name of a state.
