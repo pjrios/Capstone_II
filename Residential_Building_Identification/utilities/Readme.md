@@ -26,8 +26,15 @@ This file contains functionalities for filtering json files based on coordinates
   ![image](https://user-images.githubusercontent.com/98301213/218215125-c65b7244-15f9-430b-bd97-2fd4e491d029.png)
     
   </p> 
-    
-  #### 4. Finally, click on create export.
+  
+  #### 4. Select the area to export on the map.
+  <p align="left">
+  
+  ![image](https://user-images.githubusercontent.com/98301213/218218832-e20a3670-4d9d-4acc-993f-2c9050233a22.png)
+
+  </p>
+  
+  #### 5. Finally, click on create export.
   <p align="left">
     
   ![image](https://user-images.githubusercontent.com/98301213/218215210-e5af7159-f008-4634-8a67-3be533d39368.png)
