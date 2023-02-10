@@ -11,10 +11,3 @@ To run this programs, you will need the following:
 ## getImages.py
 This program is designed to read a GeoJSON file containing a set of features defined by coordinates, and use those coordinates to retrieve images from Google Maps using the downloader program form "allmapsoft". 
   ### The rest of the images can be found here: https://uark.box.com/s/h6898oyvnkbumb3ix2y2fufk2nykhr5u
-
-## filter.py
-This file contains functionalities for filtering json files based on coordinates. This code filters the features in a GeoJSON file called [name].geojson based on whether their coordinates are contained within a set of polygons contained in another GeoJSON file called [name]-ra.geojson. [name] represent a variable with the name of a state.
-
-  ### We get [name].geojson from: https://github.com/Microsoft/USBuildingFootprints
-  ### We get [name]-ra.geojson from: https://export.hotosm.org/en/v3/exports/new/select/treetag
-
