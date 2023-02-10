@@ -27,7 +27,7 @@ This file contains functionalities for filtering json files based on coordinates
     
   </p> 
   
-  #### 4. Select the area to export on the map.
+  #### 4. Select the area to export on the map. There is a size limit on the selection so I recomend using a custom selections as shown in the piture. If you cannot select a complete state at once, try doing it by parts and merging it together afterwards.
   <p align="left">
   
   ![image](https://user-images.githubusercontent.com/98301213/218218832-e20a3670-4d9d-4acc-993f-2c9050233a22.png)
