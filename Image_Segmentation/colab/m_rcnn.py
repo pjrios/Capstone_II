@@ -55,7 +55,7 @@ class CustomConfig(Config):
     to the toy shapes dataset.
     """
     # Give the configuration a recognizable name
-    NAME = "object"
+    NAME = "solar_panels"
 
     # Train on 1 GPU and 8 images per GPU. We can put multiple images on each
     # GPU because the images are small. Batch size is 8 (GPUs * images/GPU).
@@ -224,12 +224,12 @@ class CustomDataset(utils.Dataset):
         class_number = len(class_ids)
         return class_number
 
-def load_training_model(config):
+def load_training_model(config, mode):
     model = modellib.MaskRCNN(mode="training", config=config,
                               model_dir=MODEL_DIR)
 
     # Which weights to start with?
-    init_with = "coco"  # imagenet, coco, or last
+    init_with = mode  # imagenet, coco, or last
 
     if init_with == "imagenet":
         model.load_weights(model.get_imagenet_weights(), by_name=True)
