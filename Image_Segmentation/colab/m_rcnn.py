@@ -268,10 +268,10 @@ def load_image_dataset(annotation_path, dataset_path, dataset_type):
 # Passing layers="heads" freezes all layers except the head
 # layers. You can also pass a regular expression to select
 # which layers to train by name pattern.
-def train_head(model, dataset_train, dataset_val, config):
+def train_head(model, dataset_train, dataset_val, config, epochs):
     model.train(dataset_train, dataset_val,
             learning_rate=config.LEARNING_RATE,
-            epochs=1,
+            epochs=epochs,
             layers='heads')
 
 
@@ -359,6 +359,4 @@ def test_random_image(test_model, dataset_val, inference_config):
     print("Annotation")
     visualize.display_instances(original_image, gt_bbox, gt_mask, gt_class_id,
                                 dataset_val.class_names, figsize=(8, 8))
-
-
 
