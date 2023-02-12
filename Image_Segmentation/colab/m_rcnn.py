@@ -271,7 +271,7 @@ def load_image_dataset(annotation_path, dataset_path, dataset_type):
 def train_head(model, dataset_train, dataset_val, config):
     model.train(dataset_train, dataset_val,
             learning_rate=config.LEARNING_RATE,
-            epochs=10,
+            epochs=1,
             layers='heads')
 
 
