@@ -268,9 +268,9 @@ def load_image_dataset(annotation_path, dataset_path, dataset_type):
 # Passing layers="heads" freezes all layers except the head
 # layers. You can also pass a regular expression to select
 # which layers to train by name pattern.
-def train_head(model, dataset_train, dataset_val, config, epochs):
+def train_head(model, dataset_train, dataset_val, config, epochs, LR):
     model.train(dataset_train, dataset_val,
-            learning_rate=config.LEARNING_RATE,
+            learning_rate=LR,
             epochs=epochs,
             layers='heads')
 
