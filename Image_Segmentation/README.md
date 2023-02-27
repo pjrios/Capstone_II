@@ -1,5 +1,6 @@
 
-## Link Google colab: https://colab.research.google.com/drive/1tnkvm4jsMe1XVq96vnaoUCNflD3F_to-?usp=sharing
+## (image segmentation) Link to Mask RCNN Google colab: https://colab.research.google.com/drive/1tnkvm4jsMe1XVq96vnaoUCNflD3F_to-?usp=sharing
+## (image clasification) Link to Inception V3 Google colab: https://colab.research.google.com/drive/1qdDWP0wIzMtPL_nADbwCoUTpKrUVwOoh?usp=sharing
 ## General instructions: 
    1. Run the first cell under installation to start installing the requirements and connect to a gpu.
    2. While that runs, drop the dataset.zip and annotions.json on the content section. If you dont have annotations or if you want to create new ones, the coco_format folder has notebook with instructions on how to crate annotations from binary masks.
