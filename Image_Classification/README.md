@@ -18,6 +18,8 @@ CoLab Notebook: https://colab.research.google.com/drive/1WB0j7tqIgsiTpH7MLx1_dIi
 
 
 # Pre-trained Model Performance (using 100 images):
+```sh
 Model        Year         Accuracy
 +++++++++++++++++++++++++++++++++++
 Swin         2021            77%
+```
