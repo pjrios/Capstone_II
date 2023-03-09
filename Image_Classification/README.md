@@ -15,3 +15,9 @@ CoLab Notebook: https://colab.research.google.com/drive/1WB0j7tqIgsiTpH7MLx1_dIi
 ** NOTE: The current code tests MobileNet. To test other pre-trained models, import the necessary pre-trained model and modify lines 38, 41, & 49. For more details about pre-trained models, please refer to https://pytorch.org/vision/main/models.html
   
 ```
+
+
+# Pre-trained Model Performance (using 100 images):
+Model        Year         Accuracy
++++++++++++++++++++++++++++++++++++
+Swin         2021            77%
