@@ -19,7 +19,27 @@ CoLab Notebook: https://colab.research.google.com/drive/1WB0j7tqIgsiTpH7MLx1_dIi
 
 # Pre-trained Model Performance (using 100 images):
 ```sh
-Model        Year         Accuracy
-+++++++++++++++++++++++++++++++++++
-Swin         2021            77%
+Model             Year         Accuracy
+++++++++++++++++++++++++++++++++++++++++
+Swin              2021            77%
+++++++++++++++++++++++++++++++++++++++++
+Vision            2020            73%
+Transformer
+(vit_b_16)
+++++++++++++++++++++++++++++++++++++++++
+Vision            2020            34%
+Transformer
+(vit_b_32)
+++++++++++++++++++++++++++++++++++++++++
+MaxVit            2022            24% (?)
+++++++++++++++++++++++++++++++++++++++++
+Wide Resnet       2016            4% (?)
+(wide_resnet50_2)
+++++++++++++++++++++++++++++++++++++++++
+RegNet            2020            2% (?)
+(regnet_x_32gf)
+++++++++++++++++++++++++++++++++++++++++
+MobileNet         2017            0% (?)
+++++++++++++++++++++++++++++++++++++++++
+MnasNet           2019            0% (?)
 ```
