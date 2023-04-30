@@ -8,3 +8,15 @@ We categorize the dataset into two categories:
 
   ## Step1: Download the dataset from Social Explorer
   ![Cover](figs/SE_step1.PNG)
+  
+  ![Cover](figs/SE_step1_2.PNG)
+  
+  ![Cover](figs/SE_step1_3.PNG)
+  
+  ![Cover](figs/SE_step1_4.PNG)
+  
+  ![Cover](figs/SE_step1_5.PNG)
+  
+  ![Cover](figs/SE_step1_6.PNG)
+  
+  ![Cover](figs/SE_step1_7.PNG)
