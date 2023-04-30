@@ -9,15 +9,21 @@ We categorize the dataset into two categories:
   ## Step1: Download the dataset from Social Explorer
   Navigate to https://www.socialexplorer.com/reports/socialexplorer/en/geographies/ACS2021_5yr and select the geographies. 
   ![Cover](figs/SE_step1.PNG)
+  
   Since our analysis is at the block group level for all block groups in Arkansas, we select 'All Block Groups' and 'All Block Groups in Arkansas'. Click 'Next' and go to the page to select the tables needed. 
   ![Cover](figs/SE_step1_2.PNG)
+  
   Select the table(s) needed. Please note that although multiple tables can be selected, but the option to export a table with transposed data in the next step is only available if one table is selected. 
   ![Cover](figs/SE_step1_3.PNG)
+  
   For example, we select the report for population density.
   ![Cover](figs/SE_step1_4.PNG)
+  
   Select the option to 'Download tranposed Excel (.xlsx)' from right pane. 
   ![Cover](figs/SE_step1_5.PNG)
+  
   After opening the excel workbook, determine the column of use. For example, we select population density (per sq. mile) (highlighted in yellow in the following image). 
   ![Cover](figs/SE_step1_6.PNG)
+  
   Copy this along with the block group information into another workbook. And do this for all the ACS reports which would result in a workbook as shown below. 
   ![Cover](figs/SE_step1_7.PNG)
