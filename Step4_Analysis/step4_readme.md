@@ -1,3 +1,5 @@
+# Stage4: Analysis
+
 This file outlines the process of comparing the socio-demographic variables with the solar panel distribution.
 We categorize the dataset into two categories:
   1. Solar Panel Distribution: This dataset is received from step4 (image segmentation) and is in the form of a .csv file with the first column listing the primary key for each block group (described further) and the second column listing the number of houses with solar panels. The third column lists the number of solar patches (one house might have more than one solar patches). 
@@ -27,3 +29,13 @@ We categorize the dataset into two categories:
   
   Copy this along with the block group information into another workbook. And do this for all the ACS reports which would result in a workbook as shown below. 
   ![Cover](figs/SE_step1_7.PNG)
+
+  Finally, save this sheet as a csv file. Let's call this 'compiled_data.csv'.
+  
+## Step2: Change the primary key of the compiled_data.csv file to geoID. 
+
+Run the script '
+
+Caution: Make sure that there are no empty spaces in the data. If the data downloaded from Social Explorer or the segmentation results have missing data points then either: 1) subsitute missing cells with zeroes or 2) use some missing data handling approaches like average value of the neighboring block groups to fill the blank cells. 
+
+Currently the script is hard-coded for specific socio-demographic variables as shown below. Make sure to change the data extraction for your customized dataset. 
