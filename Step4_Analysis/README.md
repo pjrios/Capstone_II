@@ -30,11 +30,11 @@ We categorize the dataset into two categories:
   Copy this along with the block group information into another workbook. And do this for all the ACS reports which would result in a workbook as shown below. 
   ![Cover](figs/SE_step1_7.PNG)
 
-  Finally, save this sheet as a csv file. Let's call this 'compiled_data.csv'.
+  Make sure that the number don't use comma as a separator since while importing the data, using a comma as a delimiter can lead to faulty data extraction. Finally, save this sheet as a csv file. Let's call this 'compiled_data.csv'.
   
 ## Step2: Change the primary key of the compiled_data.csv file to geoID. 
 
-Run the script 'setGeoID' to generate a file 'sdData.csv'
+Run the script 'setGeoID' to generate a file 'sdData.csv'.
 
 Caution: Make sure that there are no empty spaces in the data. If the data downloaded from Social Explorer or the segmentation results have missing data points then either: 1) subsitute missing cells with zeroes or 2) use some missing data handling approaches like average value of the neighboring block groups to fill the blank cells. 
 
