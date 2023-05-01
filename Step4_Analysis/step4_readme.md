@@ -1,4 +1,4 @@
-# Stage4: Analysis
+# Stage4: Analysis (Author: Apoorva Bisht)
 
 This file outlines the process of comparing the socio-demographic variables with the solar panel distribution.
 We categorize the dataset into two categories:
@@ -34,8 +34,20 @@ We categorize the dataset into two categories:
   
 ## Step2: Change the primary key of the compiled_data.csv file to geoID. 
 
-Run the script '
+Run the script 'setGeoID' to generate a file 'sdData.csv'
 
 Caution: Make sure that there are no empty spaces in the data. If the data downloaded from Social Explorer or the segmentation results have missing data points then either: 1) subsitute missing cells with zeroes or 2) use some missing data handling approaches like average value of the neighboring block groups to fill the blank cells. 
 
 Currently the script is hard-coded for specific socio-demographic variables as shown below. Make sure to change the data extraction for your customized dataset. 
+
+## Step3: Merge sdData.csv with solar panel distribution dataset (solarPanel.csv)
+
+Run the script 'merge' to generate another csv file, 'mergedData.csv'.
+
+The script uses the first column called key as the primary key to combine the two csv files and generate a combined csv file. 
+
+## Step4.1: Analysis (Scatter Plots)
+
+## Step4.2: Analysis (Multiple Linear Regression)
+
+## Step4.3: Analysis (AutoML) - AutoGluon
