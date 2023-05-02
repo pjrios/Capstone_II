@@ -26,7 +26,7 @@ The file `model_comparision.ipynb` under `Capstone_II/Classification + Segmentat
 
 The DenseNet per-trained model is the chosen as the image classification framework. Three techniques of implementations are tested during experiments: 1) train the pre-trained model from scratch, 2) adopt feature extraction, and 3) apply fine-tuning. The graph below shows the performance of the three techniques using the DenseNet model.  
 
-![Cover][Auxiliary/densenet_perf.PNG]
+![Cover][Auxiliary/densenet_perf.png]
 
 ## Solar Panel Segmentation
 The YOLOv8 instance segmentation framework is adopted as the architectural backbone. (more description here) The following images show sample segmentation results.
