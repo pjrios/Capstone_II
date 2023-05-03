@@ -8,3 +8,5 @@ If you wan to visualize your coco annotations, you can take a look at this repo:
 
 ## YOLOv8 annotations
 To conver COCO Anotations to YOLOv8 annotations we used COCO2YOLO https://github.com/tw-yshuang/coco2yolo.
+
+To create new YOLOv8 annotations we used the Roboflow, https://app.roboflow.com/yolov8test. Roboflow allows you to upload your images, manually anotate them and load them in our project using their library. 
