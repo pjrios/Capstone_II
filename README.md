@@ -1,4 +1,8 @@
-# Capstone II - Team 10 - Solar Panel Identification using A.I.
+# Capstone II - Team 10 - Solar Panel Identification/Analysis Using A.I.
 
-1. The folder Residential_Building_Identification currently contains programs to display/filter/modify geoJson files and retrieve images from google. 
-2. The folder Image segmentation contains the code in progress for implementing image segmentation.
+## Directory Functionality
+1. Residential_Building_Identification: Pipelines to display/filter/modify geoJson files and retrieve images from the Google API. 
+
+2. Classification + Segmentation: Models, dataseat, and auxiliary tools to support solar panel classification and segmentation.
+
+3. Analysis: Implementation to support sociodemographic analysis with solar panels distribution.
