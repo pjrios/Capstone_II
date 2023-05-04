@@ -29,6 +29,6 @@ The DenseNet per-trained model is the chosen image classification framework. Thr
 ![Cover](Auxiliary/densenet_perf.png)
 
 ## Solar Panel Segmentation
-The YOLOv8 instance segmentation framework is adopted as the architectural backbone. (more description here) The following images show sample segmentation results.
+The YOLOv8 instance segmentation framework is adopted as the architectural backbone. The following images show sample segmentation results.
 
 ![Cover](Auxiliary/seg_img.PNG)
