@@ -10,4 +10,4 @@ To run this programs, you will need the following:
 7. In addition, the programs assume that you have the necessary dependencies and packages installed to run the functions from the imported libraries.
 ## getImages.py
 This program is designed to read a GeoJSON file containing a set of features defined by coordinates, and use those coordinates to retrieve images from Google Maps using the downloader program form "allmapsoft". 
-  ### The rest of the images can be found here: https://uark.box.com/s/h6898oyvnkbumb3ix2y2fufk2nykhr5u
+  ### The rest of the images can be found here: https://uark.box.com/s/o7l7nfhc8h5udn8gfmthvyx4zukzc9ma
