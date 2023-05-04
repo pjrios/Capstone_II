@@ -1,6 +1,6 @@
 
 # Overview 
-Image data must be in a usable format to be fed into classification and segmentation models:
+To train the classification and segmentation models, the black-and-white masks, each corresponding to a standard satellite image, must be converted into a usable format. We use the two-step process outlined here:
 
 ![Cover](Auxiliary/mask_conversion.png)
 
