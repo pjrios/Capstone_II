@@ -2,9 +2,6 @@
 Given the residential building dataset, a binary classification task was performed to identify residential buildings with solar panels as the input for the following solar panel segmentation task, which processes the filtered images by counties to segment the section of images with solar panels.
 
 ## Environment Specifications
-### Minimum Device Support
-(GPU requirement here)
-
 ### Required Packages
 Please refer to `requirements.txt`
 
@@ -29,6 +26,6 @@ The DenseNet per-trained model is the chosen image classification framework. Thr
 ![Cover](Auxiliary/densenet_perf.png)
 
 ## Solar Panel Segmentation
-The YOLOv8 instance segmentation framework is adopted as the architectural backbone. (more description here) The following images show sample segmentation results.
+The YOLOv8 instance segmentation framework is adopted as the architectural backbone. The following images show sample segmentation results.
 
 ![Cover](Auxiliary/seg_img.PNG)
