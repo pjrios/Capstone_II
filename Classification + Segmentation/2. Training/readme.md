@@ -1,6 +1,6 @@
 # Overview
 
-For training the clasification and segmentation model we used the annotated data from the previews step. 
+For training the clasification and segmentation model we used the annotated data from the previous step. 
 
 ## Segmentation 
 
