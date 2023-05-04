@@ -1,4 +1,4 @@
-# Stage4: Analysis (abisht)
+# Stage4: Analysis
 
 This file outlines the process of comparing the socio-demographic variables with the solar panel distribution.
 We categorize the dataset into two categories:
