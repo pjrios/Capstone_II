@@ -57,6 +57,7 @@ Script 'scatter_plots' generates all the scatter plots for hardcoded headings. T
 Next, we utilize multiple linear regression to generate the weights for different socio-demographic variables. 
 Script 'MLR' receives a csv file as an input. The independent and dependent variables can be listed as an array. One can include more or less headings depending on the case study. Also, the last section can be used to determine the independence of the independent variables. If the correlation is above 0.5, then we ommit the variable from the analysis. The results from the correlation analysis is shown below. 
 ![Cover](figs/pairwise_correlation.png)
+
 ## Step4.3: Analysis (AutoML) - AutoGluon
 We can also utilize auto ML implementations like TPOT or AutoGluon which browse through various models to determine the model that is able to predict the data best and gives a higher R2 score. 
 We utilize following AutoGluon script for analysis: https://colab.research.google.com/github/autogluon/autogluon/blob/stable/docs/tutorials/tabular/tabular-indepth.ipynb
