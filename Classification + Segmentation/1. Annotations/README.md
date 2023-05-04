@@ -1,6 +1,5 @@
 
-# Overview 
-<<<<<<< HEAD
+# Overview
 To train the classification and segmentation models, the black-and-white masks corresponding to their respective standard satellite images must be converted into a usable format. We use the two-step process outlined here:
 
 ![Cover](Auxiliary/mask_conversion.png)
@@ -23,4 +22,3 @@ If you wan to visualize your coco annotations, you can take a look at this repo:
 
 ## YOLOv8 annotations
 To conver COCO Anotations to YOLOv8 annotations we used COCO2YOLO https://github.com/tw-yshuang/coco2yolo.
->>>>>>> e4ec818bceaa517910b3a7fce4b8a294d761bb4f
