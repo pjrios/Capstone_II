@@ -1,7 +1,7 @@
 # CSCE 4963 -- Capstone Team 10 -- Solar Panel Identification/Analysis Using A.I.
 S. Abubakar Bin Qasim, Apoorva Bisht, Lukas Vaughan, Porfirio Rios Calvo, Shi Yin Hong
 
-### *Residential_Building_Identification*: Pipelines to display/filter/modify geoJson files and retrieve residential building images from the Google API. 
+### *Residential Building Identification*: Pipelines to display/filter/modify geoJson files and retrieve residential building images from the Google API. 
 ![Cover](meta/1.PNG)
 
 ### *Classification + Segmentation*: Models, dataset, and auxiliary tools to support solar panel classification and segmentation.
