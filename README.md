@@ -9,3 +9,6 @@ S. Abubakar Bin Qasim, Apoorva Bisht, Lukas Vaughan, Porfirio Rios Calvo, Shi Yi
 
 ### *Analysis*: Implementation to support sociodemographic analysis with solar panels distribution.
 ![Cover](meta/3.PNG)
+
+### Usecases
+![Cover](meta/useCaseDig3.PNG)
