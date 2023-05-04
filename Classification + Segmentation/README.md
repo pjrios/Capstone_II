@@ -6,7 +6,7 @@ The folder contains several notebooks for performing different tasks related to 
 The basis of the requirments is for our model to detect all solar panels and count them reliably. Binary classification would not suffice for reliablity, an efficient segmentation algorithm would allow us to compare the solar energy utilization by household.
 Additionally, proper superposition of the land use data set vs solar panel will allow for efficient scalability.
 Finally, the main focus is residential buildings. Anything outside of this category would have to be removed.
-The following three paragraphs are a brief overview of what to expect in the Classification and Segmentation folder. More in-debt detail is within each folder with its respected READMEs.
+The following three paragraphs are a brief overview of what to expect in the Classification and Segmentation folder. More in-depth detail is within each folder with its respected READMEs.
 
 
 =======
