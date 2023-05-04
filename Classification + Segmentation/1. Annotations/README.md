@@ -1,6 +1,6 @@
 
 # Overview 
-To train the classification and segmentation models, the black-and-white masks, each corresponding to a standard satellite image, must be converted into a usable format. We use the two-step process outlined here:
+To train the classification and segmentation models, the black-and-white masks corresponding to their respective standard satellite images must be converted into a usable format. We use the two-step process outlined here:
 
 ![Cover](Auxiliary/mask_conversion.png)
 
