@@ -1,0 +1,151 @@
+County	FIPS code
+Arkansas County	001
+	
+Ashley County	003
+	
+Baxter County	005
+	
+Benton County	007
+	
+Boone County	009
+	
+Bradley County	011
+	
+Calhoun County	013
+	
+Carroll County	015
+	
+Chicot County	017
+	
+Clark County	019
+	
+Clay County	021
+	
+Cleburne County	023
+	
+Cleveland County	025
+	
+Columbia County	027
+	
+Conway County	029
+	
+Craighead County	031
+	
+Crawford County	033
+	
+Crittenden County	035
+	
+Cross County	037
+	
+Dallas County	039
+	
+Desha County	041
+	
+Drew County	043
+	
+Faulkner County	045
+	
+Franklin County	047
+	
+Fulton County	049
+	
+Garland County	051
+	
+Grant County	053
+	
+Greene County	055
+	
+Hempstead County	057
+	
+Hot Spring County	059
+	
+Howard County	061
+	
+Independence County	063
+	
+Izard County	065
+	
+Jackson County	067
+	
+Jefferson County	069
+	
+Johnson County	071
+	
+Lafayette County	073
+	
+Lawrence County	075
+	
+Lee County	077
+	
+Lincoln County	079
+	
+Little River County	081
+	
+Logan County	083
+	
+Lonoke County	085
+	
+Madison County	087
+	
+Marion County	089
+	
+Miller County	091
+	
+Mississippi County	093
+	
+Monroe County	095
+	
+Montgomery County	097
+	
+Nevada County	099
+	
+Newton County	101
+	
+Ouachita County	103
+	
+Perry County	105
+	
+Phillips County	107
+	
+Pike County	109
+	
+Poinsett County	111
+	
+Polk County	113
+	
+Pope County	115
+	
+Prairie County	117
+	
+Pulaski County	119
+	
+Randolph County	121
+	
+St. Francis County	123
+	
+Saline County	125
+	
+Scott County	127
+	
+Searcy County	129
+	
+Sebastian County	131
+	
+Sevier County	133
+	
+Sharp County	135
+	
+Stone County	137
+	
+Union County	139
+	
+Van Buren County	141
+	
+Washington County	143
+	
+White County	145
+	
+Woodruff County	147
+	
+Yell County	149
+	
