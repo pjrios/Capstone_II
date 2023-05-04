@@ -6,7 +6,7 @@ Binary_to_COCO.ipynb is used to convert a set of binary masks, black and white i
 
 If you want to visualize your COCO annotations, you can take a look at this repo: https://github.com/trsvchn/coco-viewer, which has instructions and information.
 
-![Cover](Auxiliary/binary_img_mask.png)
+![Cover](Auxiliary/binary_img_mask.png =250x250)
 
 ## YOLOv8 annotations
 To convert COCO Anotations to YOLOv8 annotations we used COCO2YOLO https://github.com/tw-yshuang/coco2yolo.
