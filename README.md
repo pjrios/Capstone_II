@@ -1,3 +1,7 @@
+# AI-Supported Analysis of Residential Rooftop Solar Panels in EPSCoR Jurisdictions![image](https://user-images.githubusercontent.com/81196274/236353258-a4ea3a57-1101-49a4-b62d-1adffdb19afd.png)
+Apoorva Bisht, Porfirio Rios Calvo, Shi Yin
+Hong, Sahibzada Abubakar Qasim, Lukas Vaughan
+
 ### *Residential Building Identification*: Pipelines to display/filter/modify geoJson files and retrieve residential building images from the Google API. 
 ![Cover](meta/1.PNG)
 
