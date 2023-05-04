@@ -57,4 +57,4 @@ Script 'MLR' receives a csv file as an input. The independent and dependent vari
 
 ## Step4.3: Analysis (AutoML) - AutoGluon
 We can also utilize auto ML implementations like TPOT or AutoGluon to which browse through various models to determine the model that is able to predict the data best and gives a higher R2 score. 
-We utilize following AutoGluon script for analysis: 
+We utilize following AutoGluon script for analysis: https://colab.research.google.com/github/autogluon/autogluon/blob/stable/docs/tutorials/tabular/tabular-indepth.ipynb
