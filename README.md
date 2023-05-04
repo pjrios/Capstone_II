@@ -2,10 +2,10 @@
 
 ## Directory Functionality
 1. Residential_Building_Identification: Pipelines to display/filter/modify geoJson files and retrieve images from the Google API. 
-![Cover](meta/1.png)
+![Cover](meta/1.PNG)
 
 2. Classification + Segmentation: Models, dataseat, and auxiliary tools to support solar panel classification and segmentation.
-![Cover](meta/2.png)
+![Cover](meta/2.PNG)
 
 3. Analysis: Implementation to support sociodemographic analysis with solar panels distribution.
-![Cover](meta/3.png)
+![Cover](meta/3.PNG)
