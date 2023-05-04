@@ -12,3 +12,6 @@ Apoorva Bisht, Porfirio Rios Calvo, Shi Yin Hong, Sahibzada Abubakar Qasim, Luka
 
 ### *Usecases*
 ![Cover](meta/useCaseDig3.PNG)
+
+### *Requirements*
+All codes are automatically executable via Jupyter notebooks or on Google CoLab. No local installation is necessary unless given specific instruction.
